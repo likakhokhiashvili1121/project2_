@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="project2" parallel="true" thread-count="2">
+    <listeners>
+        <listener class-name="db.TestListener"/>
+    </listeners>
+    <test name="Groups">
+        <groups>
+            <run>
+                <include name="Regression1" />
+                <include name="Regression2" />
+            </run>
+        </groups>
+        <classes>
+            <class name="FinalSwoopTest"/>
+        </classes>
+    </test>
+
+</suite>
